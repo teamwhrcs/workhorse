@@ -189,13 +189,14 @@
     .contact-us:hover {
         background-color: #0056b3;
     }
+    
     </style>
 </head>
 <body style="background-color: rgb(220, 235, 235);">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="https://whrcs.com/wp-content/uploads/2024/03/Work-Horse.png" alt="Work Horse Logo" width="250" height="80">
+                <img src="images/workhorse logo.jpeg" alt="Work Horse Logo" width="250" height="80">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -220,12 +221,32 @@
         <div class="cyber-savvy-container">
             <h1>Our Services</h1>
             <p>We have over 3 years of experience</p>
-            <button class="learn-more-btn">Learn More</button>
+            <button class="learn-more-btn" onclick="showMoreInfo()">Learn More</button>
             <img src="https://wallpapercave.com/wp/wp3537541.jpg" alt="Girl with headphones and tablet" class="girl-image">
+            <div id="more-info" style="display: none; margin-top: 20px;">
+                <p>We provide top-notch services in cybersecurity, including:</p>
+                <ul>
+                    <li>Security assessments</li>
+                    <li>Vulnerability management</li>
+                    <li>Cyber awareness training</li>
+                </ul>
+                <p>Contact us today to learn how we can enhance your digital safety!</p>
+            </div>
         </div>
     </div>
-
-   
+    
+    <script>
+        function showMoreInfo() {
+            const moreInfo = document.getElementById("more-info");
+            if (moreInfo.style.display === "none") {
+                moreInfo.style.display = "block";
+            } else {
+                moreInfo.style.display = "none";
+            }
+        }
+    </script>
+    
+   <!--Insights-->
     <div class="container insights-container my-5">
         <h2 class="text-center mb-4">Our Insights</h2>
         <div class="row row-cols-1 row-cols-md-4 g-4">
@@ -236,12 +257,12 @@
                     <img src="https://jobhouse.com.gh/recruitment/wp-content/uploads/2017/09/Recruitment-2.jpg" class="card-img-top" alt="Insight 1">
                     <div class="card-body">
                         <h5 class="card-title"> Recruitment Services</h5>
-                        <p style="text-align: justify;" class="card-text text-justify">Permanent Staffing: Finding and placing candidates in full-time, long-term positions within client organizations.
+                        <p >Permanent Staffing: Finding and placing candidates in full-time, long-term positions within client organizations.
                             Temporary/Contract Staffing: Providing employees for short-term assignments or specific projects.
                             Executive Search (Head-hunting): Identifying and recruiting top-tier leadership and C-suite candidates.
                             Mass/Bulk Hiring: Managing large-scale recruitment drives for organizations expanding rapidly or hiring for multiple positions.
                             </p>
-                        <a href="about.html" class="read-more">Know more &nbsp; &#8250;</a>
+                      
                     </div>
                 </div>
             </div>
@@ -252,8 +273,8 @@
                     <img src="https://rushguides.com/wp-content/uploads/2024/01/software-for-workforce-management.png" class="card-img-top" alt="Insight 2">
                     <div class="card-body">
                         <h5 class="card-title"> Workforce Management</h5>
-                        <p style="text-align: justify;"  class="card-text text-justify">We offer comprehensive Payroll Management services, handling salary distribution, tax deductions, and ensuring compliance with local regulations. Our Employee Onboarding services help new hires seamlessly transition into their roles by assisting with documentation and processes. Additionally, we provide HR Outsourcing, taking over various HR functions such as employee records management, compliance, and benefits administration. 
-                        <a href="about.html" class="read-more">Know more &nbsp; &#8250;</a>
+                        <p>We offer comprehensive Payroll Management services, handling salary distribution, tax deductions, and ensuring compliance with local regulations. Our Employee Onboarding services help new hires seamlessly transition into their roles by assisting with documentation and processes. Additionally, we provide HR Outsourcing, taking over various HR functions such as employee records management, compliance, and benefits administration. 
+                       
                     </div>
                 </div>
             </div>
@@ -264,9 +285,9 @@
                     <img src="https://cdn.prod.website-files.com/63fef929dc32cb28d93d6c87/642422b7338a14a4a00d2ec8_61c3f1f0f11949bc6a966997_EDMs%2520(5).webp" class="card-img-top" alt="Insight 3">
                     <div class="card-body">
                         <h5 class="card-title">Specialized Talent Acquisition</h5>
-                        <p style="text-align: justify;"  class="card-text text-justify">We specialize in Industry-specific Staffing, offering highly skilled professionals tailored for sectors such as IT, healthcare, finance, construction, and more. Our approach focuses on understanding the unique needs of each industry to provide top talent that aligns with your business goals. Additionally, we excel in Skill-based Recruitment, identifying niche talent with specialized skills.
+                        <p>We specialize in Industry-specific Staffing, offering highly skilled professionals tailored for sectors such as IT, healthcare, finance, construction, and more. Our approach focuses on understanding the unique needs of each industry to provide top talent that aligns with your business goals. Additionally, we excel in Skill-based Recruitment, identifying niche talent with specialized skills.
                             </p>
-                        <a href="about.html" class="read-more">Know more &nbsp; &#8250;</a>
+                       
                     </div>
                 </div>
             </div>
@@ -277,8 +298,8 @@
                     <img src="https://www.growtalent.ca/assets/images/staffing_image.jpg" class="card-img-top" alt="Insight 4">
                     <div class="card-body">
                         <h5 class="card-title">Temporary to Permanent Staffing</h5>
-                        <p style="text-align: justify;" class="card-text text-justify">Temporary to Permanent Staffing is a service where organizations hire employees on a temporary basis, with the option to transition them into permanent roles after evaluating their performance, skills, and cultural fit. This approach reduces hiring risks and allows employers to assess candidates in real-world work scenarios. It is particularly beneficial for businesses seeking to fill critical positions without committing to full-time hires immediately. </p>
-                        <a href="about.html" class="read-more">Know more &nbsp; &#8250;</a>
+                        <p>Temporary to Permanent Staffing is a service where organizations hire employees on a temporary basis, with the option to transition them into permanent roles after evaluating their performance, skills, and cultural fit. This approach reduces hiring risks and allows employers to assess candidates in real-world work scenarios. It is particularly beneficial for businesses seeking to fill critical positions without committing to full-time hires immediately. </p>
+                    
                     </div>
                 </div>
             </div>
@@ -287,51 +308,51 @@
     
     <div class="container insights-container my-5">
         <div class="row row-cols-1 row-cols-md-4 g-4">
-            <!-- Insight 1 -->
+            <!-- Insight 5 -->
             <div class="col">
                 <div class="card insight-card position-relative">
                     <div class="highlight-bar"></div>
                     <img src="https://img.freepik.com/free-photo/successful-connected-business-people_53876-94724.jpg?t=st=1732000689~exp=1732004289~hmac=6563b99b5654dc7b0837f17b853080eb183369f074e51ffcd97218acd17f1d53&w=996" class="card-img-top" alt="Insight 1">
                     <div class="card-body">
                         <h5 class="card-title">International Recruitment</h5>
-                        <p style="text-align: justify;"  class="card-text text-justify">International Recruitment involves sourcing and hiring talent from various countries to meet an organization’s workforce needs. This approach is particularly valuable for accessing a global talent pool with specialized skills or filling roles where local expertise is in short supply. By broadening the search for candidates beyond local borders, businesses can tap into a diverse range of skills and perspectives. This global reach enhances the quality of hires and supports business growth.</p>
-                        <a href="about.html" class="read-more">Know more &nbsp; &#8250;</a>
+                        <p>International Recruitment involves sourcing and hiring talent from various countries to meet an organization’s workforce needs. This approach is particularly valuable for accessing a global talent pool with specialized skills or filling roles where local expertise is in short supply. By broadening the search for candidates beyond local borders, businesses can tap into a diverse range of skills and perspectives. This global reach enhances the quality of hires and supports business growth.</p>
+                       
                     </div>
                 </div>
             </div>
-            <!-- Insight 2 -->
+            <!-- Insight 6 -->
             <div class="col">
                 <div class="card insight-card position-relative">
                     <div class="highlight-bar"></div>
                     <img src="https://viralsolutions.net/wp-content/uploads/2015/11/VS-Team-working-collaboratively-on-a-graphic-Header.jpg" class="card-img-top" alt="Insight 2">
                     <div class="card-body">
                         <h5 class="card-title">Training and Development</h5>
-                        <p style="text-align: justify;"  class="card-text text-justify">Training and Development refers to the systematic efforts aimed at enhancing employees' skills, knowledge, and performance. It includes activities like workshops. Effective training helps organizations improve productivity and adapt to changes. Development focuses on long-term growth, preparing employees for future roles and responsibilities. Together, they foster a culture of continuous learning and professional growth within an organization.</p>
-                        <a href="about.html" class="read-more">Know more &nbsp; &#8250;</a>
+                        <p  >Training and Development refers to the systematic efforts aimed at enhancing employees' skills, knowledge, and performance. It includes activities like workshops. Effective training helps organizations improve productivity and adapt to changes. Development focuses on long-term growth, preparing employees for future roles and responsibilities. Together, they foster a culture of continuous learning and professional growth within an organization.</p>
+                        
                     </div>
                 </div>
             </div>
-            <!-- Insight 3 -->
+            <!-- Insight 7 -->
             <div class="col">
                 <div class="card insight-card position-relative">
                     <div class="highlight-bar"></div>
                     <img src="https://img.freepik.com/free-vector/human-resources-concept-illustration_114360-22474.jpg?t=st=1732000369~exp=1732003969~hmac=731cd53c1dac30c1203755255cae1b5c9e87f04f716cc429bda895db8d6d8584&w=996" class="card-img-top" alt="Insight 3">
                     <div class="card-body">
                         <h5 class="card-title">HR Consulting and Workforce Planning</h5>
-                        <p style="text-align: justify;"  class="card-text text-justify">Staffing agencies offer HR consulting services to optimize an organization’s workforce management. This includes talent analytics, succession planning, and compliance support. Workforce planning ensures businesses have the right people in the right roles at the right time. Consultancies also advise on compensation, benefits, and employee engagement strategies. This service enhances operational efficiency and workforce satisfaction.</p>
-                        <a href="about.html" class="read-more">Know more &nbsp; &#8250;</a>
+                        <p   >Staffing agencies offer HR consulting services to optimize an organization’s workforce management. This includes talent analytics, succession planning, and compliance support. Workforce planning ensures businesses have the right people in the right roles at the right time. Consultancies also advise on compensation, benefits, and employee engagement strategies. This service enhances operational efficiency and workforce satisfaction.</p>
+                      
                     </div>
                 </div>
             </div>
-            <!-- Insight 4 -->
+            <!-- Insight 8 -->
             <div class="col">
                 <div class="card insight-card position-relative">
                     <div class="highlight-bar"></div>
                     <img src="https://www.talentis.global/wp-content/uploads/2019/08/shutterstock_158110550-1-324x216.jpg" class="card-img-top" alt="Insight 4">
                     <div class="card-body">
                         <h5 class="card-title">Executive Search (Head-hunting)</h5>
-                        <p style="text-align: justify;" class="card-text text-justify">Executive search focuses on hiring top-level executives and leaders. This service involves a more personalized approach, including discreetly identifying and approaching candidates with specialized skills. Recruitment consultants leverage extensive networks to find high-caliber talent. The process ensures alignment with the company’s vision and leadership requirements. It often includes succession planning and strategic advisory.</p>
-                        <a href="about.html" class="read-more">Know more &nbsp; &#8250;</a>
+                        <p>Executive search focuses on hiring top-level executives and leaders. This service involves a more personalized approach, including discreetly identifying and approaching candidates with specialized skills. Recruitment consultants leverage extensive networks to find high-caliber talent. The process ensures alignment with the company’s vision and leadership requirements. It often includes succession planning and strategic advisory.</p>
+                        
                     </div>
                 </div>
             </div>
@@ -355,7 +376,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 text-center mb-3 mb-md-0">
-                    <img src="https://whrcs.com/wp-content/uploads/2024/03/Work-Horse.png" width="300" alt="Work Horse">
+                    <img src="images/workhorse logo.jpeg" width="300" alt="Work Horse">
                 </div>
                 <div class="col-md-4">
                     <h5>Quick Links</h5>

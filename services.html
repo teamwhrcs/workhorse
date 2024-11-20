@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        .cyber-savvy-container {
+            background-color: #829299;
+            color: #333333;
+            padding: 2rem;
+            text-align: left;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .cyber-savvy-container h1 {
+            font-weight: bold;
+        }
+        .cyber-savvy-container p {
+            font-size: 1.2rem;
+        }
+        .learn-more-btn {
+            background-color: #325584;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+        .girl-image {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            max-width: 300px;
+            border-radius: 15px;
+        }
+        .insights-container {
+            background-color: #f6f8fa;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        .insight-card {
+            border: none;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        .insight-card:hover {
+            transform: scale(1.02);
+        }
+        .insight-card h5 {
+            font-weight: bold;
+        }
+        .insight-card p {
+            color: #666;
+        }
+        .read-more {
+            color: #436797;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        .highlight-bar {
+            width: 4px;
+            height: 100%;
+            background-color: #00cfe8;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .contact-box {
+            background-color: #aabcce;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .contact-us {
+            background-color: #235182;
+            color: azure;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .footer-logo {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+        .footer-item ul {
+            padding: 0;
+            list-style: none;
+        }
+        .footer-item ul li a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .filled-button {
+            background-color: rgb(9, 13, 13);
+            color: antiquewhite;
+        }
+        .expertise-image {
+        height: 300px;
+        object-fit: cover;
+        width: 100%;
+    }
+    .insight-img {
+        height: 200px; /* Adjust to your desired height */
+        object-fit: cover; /* Ensures the image covers the space without stretching */
+    }
+
+    .insight-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        position: relative; /* This is necessary for positioning child elements like the "Read more" link */
+    }
+
+    .card-body {
+        flex-grow: 1;
+    }
+
+    .read-more {
+        position: absolute;
+        bottom: 10px; /* Distance from the bottom of the card */
+        right: 10px; /* Distance from the right edge of the card */
+        font-size: 14px; /* Adjust size of the text */
+        color: #007bff; /* Blue color for the link */
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline; /* Optional: adds underline on hover */
+    }
+    .insight-card {
+        border: none; /* Remove border */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    .card-img-top {
+        height: 200px; /* Fixed image height */
+        object-fit: cover;
+    }
+
+    .highlight-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #007bff;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .read-more {
+        color: #007bff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    .contact-box {
+        text-align: center;
+        padding: 30px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+    }
+
+    .contact-us {
+        background-color: #007bff;
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .contact-us:hover {
+        background-color: #0056b3;
+    }
+    </style>
+</head>
+<body style="background-color: rgb(220, 235, 235);">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://whrcs.com/wp-content/uploads/2024/03/Work-Horse.png" alt="Work Horse Logo" width="250" height="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="contact.html">Contact</a></li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="cyber-savvy-container">
+            <h1>Our Services</h1>
+            <p>We have over 3 years of experience</p>
+            <button class="learn-more-btn">Learn More</button>
+            <img src="https://wallpapercave.com/wp/wp3537541.jpg" alt="Girl with headphones and tablet" class="girl-image">
+        </div>
+    </div>
+
+   
+    <div class="container insights-container my-5">
+        <h2 class="text-center mb-4">Our Insights</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <!-- Insight 1 -->
+            <div class="col">
+                <div class="card insight-card position-relative">
+                    <div class="highlight-bar"></div>
+                    <img src="https://jobhouse.com.gh/recruitment/wp-content/uploads/2017/09/Recruitment-2.jpg" class="card-img-top" alt="Insight 1">
+                    <div class="card-body">
+                        <h5 class="card-title"> Recruitment Services</h5>
+                        <p style="text-align: justify;" class="card-text text-justify">Permanent Staffing: Finding and placing candidates in full-time, long-term positions within client organizations.
+                            Temporary/Contract Staffing: Providing employees for short-term assignments or specific projects.
+                            Executive Search (Head-hunting): Identifying and recruiting top-tier leadership and C-suite candidates.
+                            Mass/Bulk Hiring: Managing large-scale recruitment drives for organizations expanding rapidly or hiring for multiple positions.
+                            </p>
+                        <a href="about.html" class="read-more">Know more &nbsp; &#8250;</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Insight 2 -->
+            <div class="col">
+                <div class="card insight-card position-relative">
+                    <div class="highlight-bar"></div>
+                    <img src="https://rushguides.com/wp-content/uploads/2024/01/software-for-workforce-management.png" class="card-img-top" alt="Insight 2">
+                    <div class="card-body">
+                        <h5 class="card-title"> Workforce Management</h5>
+                        <p style="text-align: justify;"  class="card-text text-justify">We offer comprehensive Payroll Management services, handling salary distribution, tax deductions, and ensuring compliance with local regulations. Our Employee Onboarding services help new hires seamlessly transition into their roles by assisting with documentation and processes. Additionally, we provide HR Outsourcing, taking over various HR functions such as employee records management, compliance, and benefits administration. 
+                        <a href="about.html" class="read-more">Know more &nbsp; &#8250;</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Insight 3 -->
+            <div class="col">
+                <div class="card insight-card position-relative">
+                    <div class="highlight-bar"></div>
+                    <img src="https://cdn.prod.website-files.com/63fef929dc32cb28d93d6c87/642422b7338a14a4a00d2ec8_61c3f1f0f11949bc6a966997_EDMs%2520(5).webp" class="card-img-top" alt="Insight 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Specialized Talent Acquisition</h5>
+                        <p style="text-align: justify;"  class="card-text text-justify">We specialize in Industry-specific Staffing, offering highly skilled professionals tailored for sectors such as IT, healthcare, finance, construction, and more. Our approach focuses on understanding the unique needs of each industry to provide top talent that aligns with your business goals. Additionally, we excel in Skill-based Recruitment, identifying niche talent with specialized skills.
+                            </p>
+                        <a href="about.html" class="read-more">Know more &nbsp; &#8250;</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Insight 4 -->
+            <div class="col">
+                <div class="card insight-card position-relative">
+                    <div class="highlight-bar"></div>
+                    <img src="https://www.growtalent.ca/assets/images/staffing_image.jpg" class="card-img-top" alt="Insight 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Temporary to Permanent Staffing</h5>
+                        <p style="text-align: justify;" class="card-text text-justify">Temporary to Permanent Staffing is a service where organizations hire employees on a temporary basis, with the option to transition them into permanent roles after evaluating their performance, skills, and cultural fit. This approach reduces hiring risks and allows employers to assess candidates in real-world work scenarios. It is particularly beneficial for businesses seeking to fill critical positions without committing to full-time hires immediately. </p>
+                        <a href="about.html" class="read-more">Know more &nbsp; &#8250;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container insights-container my-5">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <!-- Insight 1 -->
+            <div class="col">
+                <div class="card insight-card position-relative">
+                    <div class="highlight-bar"></div>
+                    <img src="https://img.freepik.com/free-photo/successful-connected-business-people_53876-94724.jpg?t=st=1732000689~exp=1732004289~hmac=6563b99b5654dc7b0837f17b853080eb183369f074e51ffcd97218acd17f1d53&w=996" class="card-img-top" alt="Insight 1">
+                    <div class="card-body">
+                        <h5 class="card-title">International Recruitment</h5>
+                        <p style="text-align: justify;"  class="card-text text-justify">International Recruitment involves sourcing and hiring talent from various countries to meet an organization’s workforce needs. This approach is particularly valuable for accessing a global talent pool with specialized skills or filling roles where local expertise is in short supply. By broadening the search for candidates beyond local borders, businesses can tap into a diverse range of skills and perspectives. This global reach enhances the quality of hires and supports business growth.</p>
+                        <a href="about.html" class="read-more">Know more &nbsp; &#8250;</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Insight 2 -->
+            <div class="col">
+                <div class="card insight-card position-relative">
+                    <div class="highlight-bar"></div>
+                    <img src="https://viralsolutions.net/wp-content/uploads/2015/11/VS-Team-working-collaboratively-on-a-graphic-Header.jpg" class="card-img-top" alt="Insight 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Training and Development</h5>
+                        <p style="text-align: justify;"  class="card-text text-justify">Training and Development refers to the systematic efforts aimed at enhancing employees' skills, knowledge, and performance. It includes activities like workshops. Effective training helps organizations improve productivity and adapt to changes. Development focuses on long-term growth, preparing employees for future roles and responsibilities. Together, they foster a culture of continuous learning and professional growth within an organization.</p>
+                        <a href="about.html" class="read-more">Know more &nbsp; &#8250;</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Insight 3 -->
+            <div class="col">
+                <div class="card insight-card position-relative">
+                    <div class="highlight-bar"></div>
+                    <img src="https://img.freepik.com/free-vector/human-resources-concept-illustration_114360-22474.jpg?t=st=1732000369~exp=1732003969~hmac=731cd53c1dac30c1203755255cae1b5c9e87f04f716cc429bda895db8d6d8584&w=996" class="card-img-top" alt="Insight 3">
+                    <div class="card-body">
+                        <h5 class="card-title">HR Consulting and Workforce Planning</h5>
+                        <p style="text-align: justify;"  class="card-text text-justify">Staffing agencies offer HR consulting services to optimize an organization’s workforce management. This includes talent analytics, succession planning, and compliance support. Workforce planning ensures businesses have the right people in the right roles at the right time. Consultancies also advise on compensation, benefits, and employee engagement strategies. This service enhances operational efficiency and workforce satisfaction.</p>
+                        <a href="about.html" class="read-more">Know more &nbsp; &#8250;</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Insight 4 -->
+            <div class="col">
+                <div class="card insight-card position-relative">
+                    <div class="highlight-bar"></div>
+                    <img src="https://www.talentis.global/wp-content/uploads/2019/08/shutterstock_158110550-1-324x216.jpg" class="card-img-top" alt="Insight 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Executive Search (Head-hunting)</h5>
+                        <p style="text-align: justify;" class="card-text text-justify">Executive search focuses on hiring top-level executives and leaders. This service involves a more personalized approach, including discreetly identifying and approaching candidates with specialized skills. Recruitment consultants leverage extensive networks to find high-caliber talent. The process ensures alignment with the company’s vision and leadership requirements. It often includes succession planning and strategic advisory.</p>
+                        <a href="about.html" class="read-more">Know more &nbsp; &#8250;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      <!-- Contact Us -->
+      <section  class="my-5">
+        <div class="container">
+            <div  style="background-color: rgb(165, 177, 177);" class="contact-box d-flex flex-column flex-md-row align-items-center">
+                <div class="flex-grow-1 mb-3 mb-md-0">
+                    <h3>Get in Touch With Us</h3>
+                    <p>If you have any questions or would like to discuss your needs, please feel free to reach out. We’re here to help you with any inquiries!</p>
+                </div>
+                <a href="contact.html" class="contact-us">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-secondary text-light pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <img src="https://whrcs.com/wp-content/uploads/2024/03/Work-Horse.png" width="300" alt="Work Horse">
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="product.html" class="text-white text-decoration-none">Products</a></li>
+                        <li><a href="index.html" class="text-white text-decoration-none">How we work</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none">Our Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Full Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="E-Mail Address" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center py-3">
+                <p style="color: black;" >&copy; 2024 Work Horse. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body>
+</html>

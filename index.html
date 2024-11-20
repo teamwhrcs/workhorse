@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: rgb(220, 235, 235);
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            padding: 1rem 0;
+            background-color: #235182;
+        }
+        .navbar-brand img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+        }
+        .navbar-nav .nav-link {
+            font-weight: bold;
+            color: white;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffd700;
+        }
+
+        /* Hero Section */
+        .hero-container {
+            position: relative;
+            height: 700px;
+            background-image: url('https://images.pexels.com/photos/4344860/pexels-photo-4344860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            animation: backgroundAnimation 12s infinite;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 50% 50%; }
+            100% { background-position: 0% 100%; }
+        }
+
+        .content-overlay {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .content-overlay h1 {
+            font-size: 62px;
+            color: #fff;
+        }
+        .content-overlay p {
+            font-size: 18px;
+            color: #fff;
+        }
+        .button-group a {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 30px;
+        }
+        .btn-secondary {
+            background-color: #8195c4;
+            border: none;
+        }
+        .btn-success {
+            background-color: #4f697a;
+            border: none;
+        }
+
+        /* Section Styles */
+        .section-heading {
+            font-size: 36px;
+            font-weight: 700;
+            color: #235182;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-content {
+            font-size: 18px;
+            color: #333;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* Expertise Cards */
+        .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section-heading {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 40px;
+        font-weight: bold;
+    }
+
+    .expertise-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .expertise-card img {
+        width: 100%;
+        height: 250px;  /* Fixed height for uniformity */
+        object-fit: cover; /* Ensure images maintain aspect ratio */
+    }
+
+    .card-body {
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-body h5 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .card-body p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .read-more {
+        font-size: 14px;
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    .read-more:hover {
+        color: #0056b3;
+    }
+
+    .expertise-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+        /* Extra Image Section */
+       
+        /* New Interactive Image & Content Section */
+        .interactive-container {
+        background-color: #f8f9fa;
+        padding: 60px 0;
+    }
+
+    .interactive-container .section-heading {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 50px;
+        font-weight: bold;
+    }
+
+    .interactive-container .interactive-box {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .interactive-container .interactive-box img {
+        width: 100%;
+        height: 350px; /* Increased the size of images */
+        object-fit: cover; /* Maintain aspect ratio */
+        transition: transform 0.5s ease;
+    }
+
+    .interactive-container .interactive-box:hover img {
+        transform: scale(1.05);
+    }
+
+    .interactive-container .interactive-box .overlay-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        padding: 15px;
+    }
+
+    .interactive-container .interactive-box:hover .overlay-text {
+        opacity: 1;
+    }
+
+    .interactive-container .interactive-box .overlay-text h3 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .interactive-container .interactive-box .overlay-text p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .interactive-container .interactive-box .overlay-text .btn {
+        background-color: #007bff;
+        color: white;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        font-size: 14px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .interactive-container .interactive-box .overlay-text .btn:hover {
+        background-color: #0056b3;
+    }
+
+        /* Contact Us Section */
+        .contact-box {
+            background-color: #aabcce;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .contact-us {
+            background-color: #235182;
+            color: azure;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+        .contact-us:hover {
+            background-color: #ffd700;
+            color: #235182;
+        }
+        .extra-container {
+        background-color: #f4f7f9;
+        padding: 60px 0;
+    }
+
+    .extra-container .image-box {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .extra-container .image-box img {
+        width: 100%;
+        height: 300px; /* Set a fixed height for the images */
+        object-fit: cover; /* Ensure the aspect ratio is maintained */
+        transition: transform 0.5s ease;
+    }
+
+    .extra-container .image-box:hover img {
+        transform: scale(1.1);
+    }
+
+    .extra-container .image-box .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .extra-container .image-box:hover .overlay {
+        opacity: 1;
+    }
+
+    .extra-container .image-box .overlay h3 {
+        font-size: 30px;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    <!--freshlook-->
+    .fresh-look-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #6c5ce7, #ff6b6b);
+            color: white;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+<!--freshlook section-->
+        .fresh-look-section h2 {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .fresh-look-section p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .fresh-look-section .btn-custom {
+            background-color: #5b5182;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 50px;
+            transition: background-color 0.9s ease;
+        }
+
+        .fresh-look-section .btn-custom:hover {
+            background-color: #e67e22;
+            cursor: pointer;
+        }
+       
+        .interactive-box {
+        position: relative;
+        text-align: center;
+    }
+
+    .interactive-box img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .overlay-text {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        position: relative;
+        margin-top: -20px;
+    }
+
+    .extra-info {
+        display: none;
+        margin-top: 10px;
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        color: black; /* Ensures the text color is black */
+    }
+
+    .btn-primary {
+        cursor: pointer;
+    }
+
+    </style>
+</head>
+<body style="background-color: rgb(220, 235, 235);"></body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://whrcs.com/wp-content/uploads/2024/03/Work-Horse.png" alt="Work Horse Logo" width="250" height="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="contact.html">Contact</a></li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-container">
+        <div class="content-overlay">
+            <h1 style="color: #100d0d;">Your Success Starts Here</h1>
+            <p>Empowering your career with expert solutions and resources</p>
+            <div class="button-group">
+                <a href="#" id="learnMoreBtn" class="btn btn-secondary">Learn More</a>
+                <a href="contact.html" class="btn btn-success">Contact Us</a>
+            </div>
+            <!-- Hidden additional information -->
+            <div id="additionalInfo" style="display: none; margin-top: 20px;">
+                <h2>More About Us</h2>
+                <p style="color:aqua;">We offer a wide range of expert solutions to boost your career, including training, mentorship programs, and networking opportunities. Our dedicated team is here to guide you every step of the way!</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // JavaScript to toggle additional information
+        document.getElementById("learnMoreBtn").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default anchor behavior
+            const additionalInfo = document.getElementById("additionalInfo");
+            if (additionalInfo.style.display === "none") {
+                additionalInfo.style.display = "block";
+                this.textContent = "Show Less"; // Change button text
+            } else {
+                additionalInfo.style.display = "none";
+                this.textContent = "Learn More"; // Reset button text
+            }
+        });
+    </script>
+    
+    <!-- Expertise Section -->
+   
+<div class="container py-5">
+    <h2 class="section-heading text-center mb-4">Our Expertise</h2>
+    <div class="row">
+        <!-- Expertise 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="expertise-card card">
+                <img src="https://as1.ftcdn.net/v2/jpg/05/16/73/24/1000_F_516732466_SxCmyfJLTdb0CxUE2QpJLz53qRko8Acv.jpg" alt="Expertise 1" class="card-img-top">
+                <div class="card-body">
+                    <h5>Career Development</h5>
+                    <p>Helping you build your professional skills and advance your career with personalized coaching.</p>
+                    <span class="read-more" onclick="toggleContent(this)">Read More</span>
+                    <div class="extra-content">
+                        <p>Our career development programs include mentoring, workshops, and personalized advice tailored to your unique goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expertise 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="expertise-card card">
+                <img src="https://img.freepik.com/free-photo/job-hiring-vacancy-team-interview-career-recruiting_53876-121268.jpg?t=st=1732015248~exp=1732018848~hmac=a942f3793f065ead40fcf150af006f2bcaec7c26e7f9b9b8eb8cb0289d7d2b41&w=740" alt="Expertise 2" class="card-img-top">
+                <div class="card-body">
+                    <h5>Job Placement</h5>
+                    <p>We connect you with top companies, guiding you through the hiring process with ease.</p>
+                    <span class="read-more" onclick="toggleContent(this)">Read More</span>
+                    <div class="extra-content">
+                        <p>Through our extensive network, we help you find the right role while supporting you in interviews and negotiations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expertise 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="expertise-card card">
+                <img src="https://cdn.elearningindustry.com/wp-content/uploads/2018/03/5-steps-to-building-stronger-employees-ccreate-a-training-program-that-works.jpg" alt="Expertise 3" class="card-img-top">
+                <div class="card-body">
+                    <h5>Training Programs</h5>
+                    <p>Our training programs equip you with the skills needed to excel in today’s competitive job market.</p>
+                    <span class="read-more" onclick="toggleContent(this)">Read More</span>
+                    <div class="extra-content">
+                        <p>We provide industry-specific training and certifications to boost your expertise and employability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+    function toggleContent(button) {
+        const extraContent = button.nextElementSibling;
+        if (extraContent.style.display === "none" || extraContent.style.display === "") {
+            extraContent.style.display = "block";
+            button.textContent = "Show Less";
+        } else {
+            extraContent.style.display = "none";
+            button.textContent = "Read More";
+        }
+    }
+    
+</script>
+
+    
+<!-- Extra Container -->
+<div class="extra-container">
+    <div class="container">
+        <div class="row">
+            <!-- First Image Box -->
+            <div class="col-md-6 mb-4">
+                <div class="image-box">
+                    <img src="https://media.istockphoto.com/id/468435098/vector/teamwork-illustration.jpg?s=612x612&w=0&k=20&c=jDv7qd9XHvWQv8F-sgxbgLL1ELACbvCFXsMaFDM0jFs=" alt="Image 1" class="img-fluid">
+                    <div class="overlay">
+                        <h3>Building Better Futures</h3>
+                        <p>Empowering individuals and organizations to reach their full potential.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Image Box -->
+            <div class="col-md-6 mb-4">
+                <div class="image-box">
+                    <img src="https://skillgigs.com/wp-content/uploads/2023/09/freelance-work-handsome-young-indian-man-working-2023-05-04-00-25-40-utc-scaled-1-2048x1366.webp" alt="Image 2" class="img-fluid">
+                    <div class="overlay">
+                        <h3>Career Success Starts Here</h3>
+                        <p>Your gateway to unlocking professional growth and achieving your ambitions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--semi circle box-->
+
+
+
+    <!-- New Interactive Image & Content Section -->
+    <div class="interactive-container">
+        <div class="container">
+            <h2 class="section-heading text-center mb-4">Our Approach</h2>
+            <div class="row">
+                <!-- Approach 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="interactive-box">
+                        <img src="https://www.advictoriamsolutions.com/wp-content/uploads/2020/01/AV_SocialGraphicLightbulb_BLOG.png" alt="Approach 1">
+                        <div class="overlay-text">
+                            <h3>Innovative Solutions</h3>
+                            <p>We provide creative and innovative solutions tailored to your needs.</p>
+                            <button class="btn btn-primary" onclick="toggleInfo(this)">Know More</button>
+                            <div class="extra-info">
+                                <p>Our innovative solutions leverage the latest technology and strategies to solve complex challenges effectively. Tailored to your unique needs, we aim to provide measurable results and lasting impact.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Approach 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="interactive-box">
+                        <img src="https://img.freepik.com/free-photo/teacher-smart-instructor-grey-suit-classroom-with-computer-whiteboard-explaining-geometry_140725-163417.jpg?t=st=1732014675~exp=1732018275~hmac=ee6d608a274cae714b648f35f229921f970215030d604a7db8256e80c44ef221&w=996" alt="Approach 2">
+                        <div class="overlay-text">
+                            <h3>Expert Guidance</h3>
+                            <p>Benefit from the expertise of professionals who understand your goals.</p>
+                            <button class="btn btn-primary" onclick="toggleInfo(this)">Know More</button>
+                            <div class="extra-info">
+                                <p>Our experts bring years of experience to help you navigate challenges, identify opportunities, and achieve your personal or organizational objectives with confidence and clarity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Approach 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="interactive-box">
+                        <img src="https://img.freepik.com/premium-photo/technical-support-center-customer-service-internet-business-technology-concept_218381-5081.jpg?w=1060" alt="Approach 3">
+                        <div class="overlay-text">
+                            <h3>Comprehensive Support</h3>
+                            <p>We offer end-to-end support throughout your journey towards success.</p>
+                            <button class="btn btn-primary" onclick="toggleInfo(this)">Know More</button>
+                            <div class="extra-info">
+                                <p>From initial consultations to final implementation, we provide hands-on support, ensuring every step is seamless and aligned with your goals for long-term success.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script>
+        function toggleInfo(button) {
+            const extraInfo = button.nextElementSibling;
+            if (extraInfo.style.display === "none" || extraInfo.style.display === "") {
+                extraInfo.style.display = "block";
+                button.textContent = "Show Less";
+            } else {
+                extraInfo.style.display = "none";
+                button.textContent = "Know More";
+            }
+        }
+    </script>
+     <div class="interactive-container">
+        <div class="container">
+           
+            <div class="row">
+                <!-- Approach 4-->
+                <div class="col-md-4 mb-4">
+                    <div class="interactive-box">
+                        <img src="https://gloat.com/wp-content/uploads/2021/12/shutterstock_1022439433-1.jpg" alt="Approach 1">
+                        <div class="overlay-text">
+                            <h3>Personalized Talent Matching</h3>
+                            <p>We leverage data-driven insights and a deep understanding of industry requirements to match the right talent with the right opportunities, ensuring success for both employers and job seekers.</p>
+                            <button class="btn btn-primary" onclick="toggleInfo(this)">Know More</button>
+                            <div class="extra-info">
+                                <p>Our innovative solutions leverage the latest technology and strategies to solve complex challenges effectively. Tailored to your unique needs, we aim to provide measurable results and lasting impact.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Approach 5 -->
+                <div class="col-md-4 mb-4">
+                    <div class="interactive-box">
+                        <img src="https://www.aihr.com/wp-content/uploads/workforce-planning-template-cover-image.png" alt="Approach 2">
+                        <div class="overlay-text">
+                            <h3>Proactive Workforce Planning</h3>
+                            <p>Our approach focuses on anticipating your staffing needs, providing a flexible and scalable workforce solution to address both immediate and long-term business objectives.</p>
+                            <button class="btn btn-primary" onclick="toggleInfo(this)">Know More</button>
+                            <div class="extra-info">
+                                <p>Our experts bring years of experience to help you navigate challenges, identify opportunities, and achieve your personal or organizational objectives with confidence and clarity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Approach 6-->
+                <div class="col-md-4 mb-4">
+                    <div class="interactive-box">
+                        <img src="https://ai.flux-image.com/flux/11d4aa8d-9595-4328-a2dd-a46d60de8be4.png" alt="Approach 3">
+                        <div class="overlay-text">
+                            <h3>Collaborative Consultation Strategy</h3>
+                            <p>Through active collaboration, we work closely with clients to develop customized consultation strategies that align with their organizational goals and foster sustainable growth.</p>
+                            <button class="btn btn-primary" onclick="toggleInfo(this)">Know More</button>
+                            <div class="extra-info">
+                                <p>From initial consultations to final implementation, we provide hands-on support, ensuring every step is seamless and aligned with your goals for long-term success.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script>
+        function toggleInfo(button) {
+            const extraInfo = button.nextElementSibling;
+            if (extraInfo.style.display === "none" || extraInfo.style.display === "") {
+                extraInfo.style.display = "block";
+                button.textContent = "Show Less";
+            } else {
+                extraInfo.style.display = "none";
+                button.textContent = "Know More";
+            }
+        }
+    </script>
+    
+          <!-- Contact Us -->
+          <section  class="my-5">
+            <div class="container">
+                <div  style="background-color: rgb(165, 177, 177);" class="contact-box d-flex flex-column flex-md-row align-items-center">
+                    <div class="flex-grow-1 mb-3 mb-md-0">
+                        <h3>Get in Touch With Us</h3>
+                        <p>If you have any questions or would like to discuss your needs, please feel free to reach out. We’re here to help you with any inquiries!</p>
+                    </div>
+                    <a href="contact.html" class="contact-us">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    
+
+    <!-- Footer -->
+    
+    <footer class="bg-secondary text-light pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <img src="https://whrcs.com/wp-content/uploads/2024/03/Work-Horse.png" width="300" alt="Work Horse">
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="product.html" class="text-white text-decoration-none">Products</a></li>
+                        <li><a href="index.html" class="text-white text-decoration-none">How we work</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none">Our Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Full Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="E-Mail Address" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center py-3">
+                <p style="color: black;">&copy; 2024 Work Horse. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+        
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

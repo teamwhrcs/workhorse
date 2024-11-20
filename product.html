@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://media.licdn.com/dms/image/v2/D5612AQF_uKyaW830vA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1718888944178?e=1737590400&v=beta&t=A5T1-2AyJO8-FgkKznZPCQ8cAeRhzCUVVkRAoOs42Nc') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hero-section p {
+            font-size: 1.2rem;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .card img {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .card img:hover {
+            transform: scale(1.1);
+        }
+        .services-section, .choose-us-section, .success-stories-section {
+            padding: 60px 0;
+        }
+        .services-section h2, .choose-us-section h2, .success-stories-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        .choose-us-section {
+            background-color: #f8f9fa;
+        }
+        .choose-us-section .icon {
+            font-size: 50px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .carousel img {
+            border-radius: 10px;
+        }
+        .contact-section {
+            background-color: #007bff;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .contact-section a {
+            background-color: white;
+            color: #007bff;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+        .contact-section a:hover {
+            background-color: transparent;
+            color: white;
+        }
+        .footer-logo {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+        .footer-item ul {
+            padding: 0;
+            list-style: none;
+        }
+        .footer-item ul li a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .filled-button {
+            background-color: rgb(9, 13, 13);
+            color: antiquewhite;
+        }
+        .choose-us-section .icon:hover {
+        transform: scale(1.2);
+    }
+
+    .choose-us-section h5:hover {
+        color: #f39c12;
+    }
+    </style>
+</head>
+<body style="background-color: rgb(220, 235, 235);"></body>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://whrcs.com/wp-content/uploads/2024/03/Work-Horse.png" alt="Work Horse Logo" width="250" height="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="contact.html">Contact</a></li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1>Our Products & Services</h1>
+        <p>Your trusted partner in staffing and recruitment solutions.</p>
+    </div>
+
+    <!-- Moving Images Carousel -->
+   
+
+    <!-- Services Section -->
+    <div class="services-section">
+        <div class="container">
+            <h2>Our Key Products</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://www.viqu.co.uk/wp-content/uploads/2023/06/0610-26.png" class="card-img-top" alt="Permanent Recruitment">
+                        <div class="card-body">
+                            <h5 class="card-title">Permanent Recruitment</h5>
+                            <p class="card-text">Hire the best candidates for long-term positions tailored to your needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://nastechsolution.com/wp-content/uploads/2023/08/Temporay-Staffing-1.png" class="card-img-top" alt="Temporary Staffing">
+                        <div class="card-body">
+                            <h5 class="card-title">Temporary Staffing</h5>
+                            <p class="card-text">Flexible workforce solutions to match seasonal and project requirements.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://astuteos.com/wp-content/uploads/images-11.jpg" class="card-img-top" alt="Executive Search">
+                        <div class="card-body">
+                            <h5 class="card-title">Executive Search</h5>
+                            <p class="card-text">Identify top-tier leadership talent to drive your organization forward.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="services-section">
+        <div class="container">
+           
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://cdn3.invitereferrals.com/blog/wp-content/uploads/2023/05/11051713/19-Best-Employee-Referral-Software-That-Gets-More-Sales.jpg" class="card-img-top" alt="Permanent Recruitment">
+                        <div class="card-body">
+                            <h5 class="card-title">Employee Referral Software</h5>
+                            <p class="card-text">Employee referral programs encourage existing employees to recommend qualified candidates from their own network.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://www.ismartrecruit.com/upload/blog/main_image/Recruitment_Marketing_Tools.webp" class="card-img-top" alt="Temporary Staffing">
+                        <div class="card-body">
+                            <h5 class="card-title">Recruitment Marketing Software</h5>
+                            <p class="card-text">This product helps attract potential candidates through targeted marketing campaigns.Examples include SmashFly and Beamery. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://static.jobscan.co/blog/uploads/Blog_ATS_02_2-300x343.webp" class="card-img-top" alt="Executive Search">
+                        <div class="card-body">
+                            <h5 class="card-title">Applicant Tracking System (ATS)</h5>
+                            <p class="card-text">An ATS helps streamline the recruitment process by tracking and managing applicants from the moment they apply.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+  
+   
+
+    <!-- Why Choose Us Section -->
+    <div style="background-color: #3e3e3e; padding: 60px 0;" class="choose-us-section">
+        <div class="container">
+            <h2 style="color: #fff; font-size: 36px; font-weight: 700; text-align: center; margin-bottom: 40px;">Why Choose Us</h2>
+            <div class="row text-center">
+                <div class="col-md-4" style="margin-bottom: 40px;">
+                    <div style="font-size: 50px; color: #f39c12; transition: transform 0.3s;" class="icon">🌟</div>
+                    <h5 style="color: #fff; font-size: 24px; font-weight: 600; margin-top: 20px;">Expertise</h5>
+                    <p style="color: #ccc; font-size: 16px; margin-top: 10px;">Years of industry knowledge to deliver exceptional results.</p>
+                </div>
+                <div class="col-md-4" style="margin-bottom: 40px;">
+                    <div style="font-size: 50px; color: #e74c3c; transition: transform 0.3s;" class="icon">⚡</div>
+                    <h5 style="color: #fff; font-size: 24px; font-weight: 600; margin-top: 20px;">Efficiency</h5>
+                    <p style="color: #ccc; font-size: 16px; margin-top: 10px;">Fast, reliable, and tailored staffing solutions for your needs.</p>
+                </div>
+                <div class="col-md-4" style="margin-bottom: 40px;">
+                    <div style="font-size: 50px; color: #2ecc71; transition: transform 0.3s;" class="icon">✅</div>
+                    <h5 style="color: #fff; font-size: 24px; font-weight: 600; margin-top: 20px;">Trust</h5>
+                    <p style="color: #ccc; font-size: 16px; margin-top: 10px;">A track record of success with businesses of all sizes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Contact Section -->
+    <div style="background-color: rgb(66, 66, 54);" class="contact-section">
+        <div class="container">
+            <h3>Let’s Build Your Team Together</h3>
+            <p>Contact us to explore tailored staffing and recruitment solutions for your business.</p>
+            <a href="contact.html" class="btn btn-light">Get in Touch</a>
+        </div>
+    </div>
+     <!-- Footer -->
+     <footer class="bg-secondary text-light pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <img src="https://whrcs.com/wp-content/uploads/2024/03/Work-Horse.png" width="300" alt="Work Horse">
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="product.html" class="text-white text-decoration-none">Products</a></li>
+                        <li><a href="index.html" class="text-white text-decoration-none">How we work</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none">Our Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Full Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="E-Mail Address" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center py-3">
+                <p style="color: black;">&copy; 2024 Work Horse. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

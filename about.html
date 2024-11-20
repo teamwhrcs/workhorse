@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            background-image: url('https://alacer.in/wp-content/uploads/2020/03/it-staffing.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            animation: backgroundAnimation 10s infinite linear;
+        }
+
+        /* Transparent Context Box in Hero */
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+            max-width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* About Us Section */
+        .about-us-section {
+            padding: 80px 0;
+            background-color: #f4f4f9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-us-section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .about-us-section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Images & Context Box Section */
+        .images-context-section {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+
+        .images-context-section .image-box {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .images-context-section .image-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .images-context-section .context-box {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.6); /* Transparent background */
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .images-context-section h3 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .images-context-section p {
+            font-size: 16px;
+        }
+
+        /* New Container Section (Fresh Design) */
+        .fresh-look-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #6c5ce7, #ff6b6b);
+            color: white;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .fresh-look-section h2 {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .fresh-look-section p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .fresh-look-section .btn-custom {
+            background-color: #f39c12;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+        .fresh-look-section .btn-custom:hover {
+            background-color: #e67e22;
+            cursor: pointer;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Moving Background Animation */
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Logo */
+        .footer-logo {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+
+        .footer-item ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .footer-item ul li a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Filled Button */
+        .filled-button {
+            background-color: rgb(9, 13, 13);
+            color: antiquewhite;
+        }
+
+        .expertise-image {
+            height: 300px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .images-context-section .image-box img {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures images are cropped uniformly */
+    border-radius: 10px; /* Adds rounded corners to images */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Optional box shadow for styling */
+}
+
+    </style>
+</head>
+
+<body style="background-color: rgb(220, 235, 235);">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://whrcs.com/wp-content/uploads/2024/03/Work-Horse.png" alt="Work Horse Logo" width="250" height="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="contact.html">Contact</a></li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Welcome to Our Staffing & Consultation Services</h1>
+            <p>Your trusted partner in finding the best talent for your business.</p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us-section">
+        <div class="container text-center">
+            <h2>About Us</h2>
+            <p style="text-align:center;">We specialize in providing top-notch staffing and recruitment solutions tailored to meet your business needs. Our team is committed to helping you grow and succeed by connecting you with the best candidates available. With years of experience in the industry, we understand the challenges that businesses face when it comes to finding the right talent.
+
+                We take a personalized approach, working closely with you to understand your specific requirements, company culture, and long-term goals. By leveraging our extensive network and advanced recruitment strategies, we ensure that we find candidates who not only meet the technical requirements but also fit well within your organization's culture.</p>
+        </div>
+    </section>
+
+    <!-- New Fresh Look Section -->
+    <section class="fresh-look-section">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <p>With a unique approach to recruitment, we offer a seamless experience that benefits both employers and job seekers.
+                Let us help you build the best team possible with the right talent.</p>
+            <a href="#" class="btn btn-custom">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Images & Context Section -->
+    <section class="images-context-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 image-box">
+                    <img src="https://img.freepik.com/free-photo/close-up-young-colleagues-having-meeting_23-2149060235.jpg?t=st=1732009340~exp=1732012940~hmac=f945f796016795a00e773b2c339c6ad7cc5464cf2d46720f274df2f3f06f8e2e&w=996" alt="Image">
+                    <div class="context-box">
+                        <h3>Expert Recruitment</h3>
+                        <p>Our recruitment process ensures you get the best candidates for your business.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 image-box">
+                    <img src="https://media.istockphoto.com/id/1204743098/photo/partnership-of-business-concept-group-of-businessperson-customer-support-teamwork.jpg?s=612x612&w=0&k=20&c=xDsOni9tgXnYm8vQGQ6SqshjFjKvja8TF7Cq0jfxjgk=" alt="Image">
+                    <div class="context-box">
+                        <h3>Wide Talent Pool</h3>
+                        <p>We have access to a wide range of candidates, ensuring we find the right fit for your business.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 image-box">
+                    <img src="https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041863.jpg?t=st=1732009482~exp=1732013082~hmac=ded48fa8eee27368386fb5eeb66c4e79708b39b0aa9c7a8bc741bc64439b14cf&w=900" alt="Image">
+                    <div class="context-box">
+                        <h3>Quality Service</h3>
+                        <p>We are committed to providing high-quality service every step of the way.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container text-center py-5">
+            <h2 class="display-4 mb-4" style="font-weight: bold;">Meet Our Team</h2>
+            <p class="lead mb-5" style="font-size: 1.5rem; color: #555;">Our talented team of professionals is dedicated to providing exceptional recruitment and staffing services, tailored to meet the unique needs of your business.</p>
+            <div class="row">
+                <!-- Team Member 1 -->
+                <div class="col-md-4 team-member mb-4 d-flex justify-content-center">
+                    <div class="text-center">
+                        <img src="https://as1.ftcdn.net/v2/jpg/02/43/12/34/1000_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt="Team Member" class="rounded-circle" style="width: 180px; height: 180px; object-fit: cover; margin-top: -30px;">
+                        <h4 class="mt-3" style="font-size: 1.2rem; font-weight: bold;">John Doe</h4>
+                        <p class="text-muted" style="font-size: 1rem;">Recruitment Specialist</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="col-md-4 team-member mb-4 d-flex justify-content-center">
+                    <div class="text-center">
+                        <img src="https://as2.ftcdn.net/v2/jpg/02/92/95/17/1000_F_292951705_zv47wnXkjzHzSouYLpYcNgTOOosDv1ml.jpg" alt="Team Member" class="rounded-circle" style="width: 180px; height: 180px; object-fit: cover; margin-top: -30px;">
+                        <h4 class="mt-3" style="font-size: 1.2rem; font-weight: bold;">Mary Johnson</h4>
+                        <p class="text-muted" style="font-size: 1rem;">Operations Lead</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="col-md-4 team-member mb-4 d-flex justify-content-center">
+                    <div class="text-center">
+                        <img src="https://as2.ftcdn.net/v2/jpg/03/03/11/75/1000_F_303117590_NNmo6BS2fOBEmDp8uKs2maYmt03t8fSL.jpg" alt="Team Member" class="rounded-circle" style="width: 180px; height: 180px; object-fit: cover; margin-top: -30px;">
+                        <h4 class="mt-3" style="font-size: 1.2rem; font-weight: bold;">James Brown</h4>
+                        <p class="text-muted" style="font-size: 1rem;">Business Development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+<!--footer-->
+<footer class="bg-secondary text-light pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+                <img src="https://whrcs.com/wp-content/uploads/2024/03/Work-Horse.png" width="300" alt="Work Horse">
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                    <li><a href="product.html" class="text-white text-decoration-none">Products</a></li>
+                    <li><a href="index.html" class="text-white text-decoration-none">How we work</a></li>
+                    <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                    <li><a href="services.html" class="text-white text-decoration-none">Our Services</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Full Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="E-Mail Address" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center py-3">
+            <p style="color: black;">&copy; 2024 Work Horse. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+    
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
